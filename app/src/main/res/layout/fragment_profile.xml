@@ -75,7 +75,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".50"
-                android:text="фИО"
+                android:hint="фИО"
+                android:text="@{viewModel.name}"
                 android:textColor="@color/text_images" />
 
             <TextView
@@ -83,7 +84,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".50"
-                android:text="номер телефона"
+                android:hint="номер телефона"
+                android:text="@{viewModel.phoneNumber}"
                 android:textColor="@color/text_images" />
 
         </LinearLayout>

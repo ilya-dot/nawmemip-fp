@@ -88,6 +88,7 @@
                     android:layout_height="88dp"
                     android:layout_weight=".50"
                     android:background="@color/main"
+                    android:onClick="@{_->viewModel.auth()}"
                     android:src="@drawable/enter"/>
 
                 <ImageButton
@@ -95,6 +96,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/main"
+                    android:onClick="@{_->viewModel.openRegistration()}"
                     android:src="@drawable/registration" />
 
             </LinearLayout>
