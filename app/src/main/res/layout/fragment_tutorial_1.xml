@@ -9,7 +9,7 @@
             name="viewModel"
             type="com.example.bf_kotlin_client.viewmodels.Tutorial1ViewModel" />
     </data>
-    -
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,8 +28,6 @@
             android:textSize="34sp" />
 
 
-        -
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,8 +38,6 @@
             android:backgroundTint="@color/main"
             android:orientation="vertical">
 
-
-            -
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -9,6 +9,7 @@
             name="viewModel"
             type="com.example.bf_kotlin_client.viewmodels.OffersViewModel" />
     </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -48,7 +49,9 @@
                 android:layout_height="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 android:adapter="@{viewModel.rvProductsAdapter}"
-                app:spanCount="1" />
+                app:spanCount="1" >
+
+            </androidx.recyclerview.widget.RecyclerView>
 
 
         </LinearLayout>
