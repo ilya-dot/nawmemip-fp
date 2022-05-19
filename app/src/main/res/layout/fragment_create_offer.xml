@@ -12,38 +12,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:background="@color/background"
         android:backgroundTint="@color/background"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="66dp"
-                android:layout_height="48dp"
-                android:background="@color/background"
-                android:onClick="@{_->viewModel.create()}"
-                app:srcCompat="@drawable/back" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Объявление"
-                android:textAlignment="center"
-                android:textColor="@color/text_images"
-                android:textSize="34sp" />
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Создать запрос"
+            android:textAlignment="textStart"
+            android:textColor="@color/text_images"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/round_shape"
             android:backgroundTint="@color/main"
@@ -51,46 +40,87 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight=".50"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="37dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.001"
-                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Запрос"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_images"
+                    android:textSize="24sp" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/main"
-                        app:srcCompat="@drawable/add" />
-                </LinearLayout>
+                <EditText
+                    android:id="@+id/editTextLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Название"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/text_images"
+                    android:text="@={viewModel.name}"
+                    android:textColor="@color/text_images" />
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Описание"
+                    android:textColorHint="@color/text_images"
+                    android:inputType="textPersonName"
+                    android:text="@={viewModel.description}"
+                    android:textColor="@color/text_images" />
+
+                <EditText
+                    android:id="@+id/editTextInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:textColorHint="@color/text_images"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Цена"
+                    android:inputType="textPersonName"
+                    android:text="@={viewModel.price}"
+                    android:textColor="@color/text_images" />
 
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight=".50" >
+                android:orientation="vertical">
 
-            </androidx.recyclerview.widget.RecyclerView>
+                <Button
+                    android:id="@+id/buttonNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="125dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/text_images"
+                    android:fontFamily="@font/roboto_medium"
+                    android:onClick="@{_->viewModel.create()}"
+                    android:text="Создать"
+                    android:textColor="@color/main" />
 
-            <ImageButton
-                android:id="@+id/imageButton7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/main"
-                android:foregroundGravity="center"
-                app:srcCompat="@drawable/done" />
-
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
-
-
 
 </layout>

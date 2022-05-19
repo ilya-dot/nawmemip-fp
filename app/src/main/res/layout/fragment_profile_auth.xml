@@ -58,7 +58,8 @@
                     android:hint=" Логин"
                     android:inputType="textPersonName"
                     android:text="@={viewModel.login}"
-                    android:textColor="@color/main" />
+                    android:textColorHint="@color/text_images"
+                    android:textColor="@color/text_images" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -73,7 +74,8 @@
                     android:hint=" Пароль"
                     android:inputType="textPersonName"
                     android:text="@={viewModel.password}"
-                    android:textColor="@color/white" />
+                    android:textColorHint="@color/text_images"
+                    android:textColor="@color/text_images" />
 
             </LinearLayout>
 

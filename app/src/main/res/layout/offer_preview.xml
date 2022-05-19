@@ -19,10 +19,10 @@
 
 
         <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_shape"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/unknown_brik" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,30 +30,20 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@{viewModel.offer.productName}"
-                android:textColor="@color/text_images"
-                android:textSize="20sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-
-                <ImageButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/main"
-                    app:srcCompat="@drawable/done"
-                    android:onClick="@{_->viewModel.openEditOfferFragment()}"/>
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.offer.productName}"
+                    android:textColor="@color/text_images"
+                    android:textSize="20sp" />
 
-            </LinearLayout>
-
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/main"
+                android:onClick="@{_->viewModel.openEditOfferFragment()}"
+                app:srcCompat="@drawable/done" />
         </LinearLayout>
+
+
     </LinearLayout>
 </layout>
